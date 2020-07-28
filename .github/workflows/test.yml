@@ -11,7 +11,7 @@ jobs:
       - name: Run composer install
         run: composer install -n --prefer-dist
       - name: Run tests
-        run: ./vendor/bin/phpunit
+        run: php artisan test
         env:
           APP_ENV: testing
       - name: Upload artifacts
